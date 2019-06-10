@@ -80,7 +80,7 @@ source $ZSH/oh-my-zsh.sh
 export VIRTUAL_ENV_DISABLE_PROMPT=TRUE
 prompt_virtualenv() {
   local virtualenv_path="$VIRTUAL_ENV"
-  if [[ -n $virtualenv_path ]]; then
+  if [[ -n "$virtualenv_path" ]]; then
     prompt_segment black white "($(basename $virtualenv_path))"
   fi
 }
@@ -104,5 +104,10 @@ export LANG=en_US.UTF-8
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+
+
+# Allow bash auto completions in zsh. Because zsh completions are fucking opaque to write
+autoload -U +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
 
 source ~/.profile
