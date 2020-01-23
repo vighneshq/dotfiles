@@ -7,7 +7,7 @@ alias open="xdg-open"
 export EDITOR=/usr/bin/nano
 export GOPATH=$HOME/Documents/go
 export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOBIN
+export PATH=$PATH:$GOBIN:~/bin
 export VENVS=$HOME/Documents/venvs
 
 # Custom commands
